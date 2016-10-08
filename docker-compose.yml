@@ -1,0 +1,8 @@
+elastalert:
+  container_name: elastalert
+  image: oisis/elastalert
+  mem_limit: 256m
+  volumes:
+    - rules/:/root/elastalert/rules/
+  environment:
+    - ES_HOST=elasticsearch
